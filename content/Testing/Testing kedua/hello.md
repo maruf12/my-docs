@@ -1,5 +1,5 @@
 ---
-title: Contoh pertama
+title: Hello
 description: Text, title, and styling in standard markdown.
 navigation:
   icon: i-lucide-heading-1
@@ -7,7 +7,7 @@ navigation:
 
 ## Contoh pertama
 
-Ini adalah contoh pertama, saya penasaran bagaimana cara gambar di load.
+Hello World
 
 ::u-page-logos
 ---
