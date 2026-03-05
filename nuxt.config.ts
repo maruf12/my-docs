@@ -9,4 +9,10 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  content: {
+    build: {
+      transformers: ['~~/transformers/asciidoc'],
+    },
+  },
 });

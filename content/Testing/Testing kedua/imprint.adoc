@@ -1,0 +1,36 @@
+= ASCIIDOC format
+Doc Writer <doc.writer@asciidoc.org>
+v1.0, 2024-03-05
+
+:toc:
+:icons: font
+
+This guide provides an example of AsciiDoc syntax.
+
+== Section Title
+
+This is a paragraph with *bold* and _italicized_ words.
+Type `OK` to accept.
+
+.Image caption
+image::mountains.webp[I am the image alt text.]
+
+=== Second Level Heading
+
+. Unordered list title
+* list item 1
+** nested list item
+* list item 2
+
+. Example block title
+====
+Content in an example block is subject to normal substitutions.
+====
+
+[#id-for-listing-block]
+. Listing block title
+----
+println("Hello, World!")
+----
+
+TIP: Admonition blocks like this one are useful for drawing attention to specific information.

@@ -6,8 +6,10 @@
   },
   "dependencies": {
     "@nuxt/eslint": "1.15.1",
+    "asciidoctor": "^3.0.4",
     "better-sqlite3": "^12.5.0",
     "docus": "latest",
-    "nuxt": "^4.2.2"
+    "nuxt": "^4.2.2",
+    "rehype-parse": "^9.0.1"
   }
 }
