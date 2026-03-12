@@ -2,7 +2,7 @@
 import type { ContentNavigationItem, PageCollections } from "@nuxt/content";
 import * as nuxtUiLocales from "@nuxt/ui/locale";
 
-const { seo } = useAppConfig();
+const { seo } = useAppConfig() as any;
 const site = useSiteConfig();
 const { locale, locales, isEnabled, switchLocalePath } = useDocusI18n();
 const {
@@ -32,7 +32,7 @@ useHead({
 });
 
 useSeoMeta({
-  titleTemplate: seo.titleTemplate,
+  titleTemplate: (seo as any).titleTemplate || `%s - ${site.name}`,
   title: seo.title,
   description: seo.description,
   ogSiteName: site.name,
@@ -41,10 +41,10 @@ useSeoMeta({
 
 if (isEnabled.value) {
   const route = useRoute();
-  const defaultLocale = useRuntimeConfig().public.i18n.defaultLocale!;
+  const defaultLocale = (useRuntimeConfig() as any).public.i18n.defaultLocale!;
   onMounted(() => {
     const currentLocale = route.path.split("/")[1];
-    if (!locales.some((locale) => locale.code === currentLocale)) {
+    if (!locales.some((locale: any) => locale.code === currentLocale)) {
       return navigateTo(switchLocalePath(defaultLocale) as string);
     }
   });

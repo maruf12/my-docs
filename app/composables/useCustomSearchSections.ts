@@ -1,4 +1,5 @@
 import type { PageCollections } from '@nuxt/content'
+// @ts-ignore
 import { toHast } from 'minimark/hast'
 
 const HEADING = /^h([1-6])$/
@@ -106,10 +107,11 @@ function splitPageIntoSections(
     }
     else {
       const content = extractTextFromAst(item, ignoredTags).trim()
-      if (section === 1 && sections[section - 1]?.content === content) {
+      const currentSection = sections[section - 1]
+      if (!currentSection || (section === 1 && currentSection.content === content)) {
         continue
       }
-      sections[section - 1].content = `${sections[section - 1].content} ${content}`.trim()
+      currentSection.content = `${currentSection.content} ${content}`.trim()
     }
   }
 
@@ -130,7 +132,7 @@ export function useCustomSearchSections(
   const maxLevel = headingLevel(maxHeading)
 
   return queryCollection(collection)
-    .select('path', 'body', 'description', 'title', ...extraFields)
+    .select('path', 'body', 'description', 'title', ...(extraFields as any[]))
     .all()
     .then((documents: any[]) =>
       documents.flatMap(doc =>
