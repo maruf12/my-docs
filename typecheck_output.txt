@@ -1,0 +1,24 @@
+app/app.vue(6,14): error TS2304: Cannot find name 'useSiteConfig'.
+app/app.vue(7,58): error TS2304: Cannot find name 'useDocusI18n'.
+app/app.vue(12,5): error TS2304: Cannot find name 'useAssistant'.
+app/app.vue(36,10): error TS18046: 'seo' is of type 'unknown'.
+app/app.vue(37,16): error TS18046: 'seo' is of type 'unknown'.
+app/app.vue(44,25): error TS2571: Object is of type 'unknown'.
+app/app.vue(47,24): error TS7006: Parameter 'locale' implicitly has an 'any' type.
+app/app.vue(56,5): error TS2304: Cannot find name 'queryCollectionNavigation'.
+app/composables/useCustomSearchSections.ts(2,24): error TS2307: Cannot find module 'minimark/hast' or its corresponding type declarations.
+app/composables/useCustomSearchSections.ts(133,10): error TS2552: Cannot find name 'queryCollection'. Did you mean 'collection'?
+app/error.vue(10,61): error TS2304: Cannot find name 'useDocusI18n'.
+app/error.vue(42,25): error TS2571: Object is of type 'unknown'.
+app/error.vue(58,5): error TS2304: Cannot find name 'queryCollectionNavigation'.
+
+ ERROR  Process exited with non-zero status (2)
+
+    at G._waitForOutput (node_modules/.pnpm/tinyexec@1.0.2/node_modules/tinyexec/dist/main.js:574:92)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.run (node_modules/.pnpm/@nuxt+cli@3.33.1_@nuxt+schema@4.3.1_cac@6.7.14_magicast@0.5.2/node_modules/@nuxt/cli/dist/typecheck-C8wVgBzd.mjs:66:3)
+    at async runCommand (node_modules/.pnpm/citty@0.2.1/node_modules/citty/dist/index.mjs:188:47)
+    at async runCommand (node_modules/.pnpm/citty@0.2.1/node_modules/citty/dist/index.mjs:185:21)
+    at async runMain (node_modules/.pnpm/citty@0.2.1/node_modules/citty/dist/index.mjs:285:10) 
+
+

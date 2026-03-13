@@ -13,5 +13,8 @@
     "nuxt": "^4.2.2",
     "rehype-parse": "^9.0.1",
     "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@nuxt/ui": "^4.5.1"
   }
 }
